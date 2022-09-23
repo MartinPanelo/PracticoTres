@@ -1,17 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
 
 package com.mycompany.practicotres;
 
-/**
- *
- * @author martin
- */
 public class PracticoTres {
 
     public static void main(String[] args) {
+        
+
+// crear dos clientes 
+
+// agregarlos al registro 
+// buscar con telefono << un cliente
+
+// buscar con apellido << lista de telefonos 
+
+// busca con ciudad << lista de clientes !!
+
+// borrar con el telefono << borra nomas
+        
+        
+        
+        
         
     }
 }
