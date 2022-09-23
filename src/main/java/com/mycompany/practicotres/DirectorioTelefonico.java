@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeSet;
+import javax.swing.JOptionPane;
 
 public class DirectorioTelefonico {
 
@@ -16,24 +17,25 @@ public class DirectorioTelefonico {
 
         if (!registro.containsKey(telefono)) {
 
-            System.out.println("El cliente se agrego con exito");
+            // System.out.println("El cliente se agrego con exito");
+            JOptionPane.showMessageDialog(null, "El cliente se agrego con exito");
+
             registro.put(telefono, cliente);
 
         } else {
 
-            System.out.println("Ese numero de telefono ya esta ocupado");
-
+            //   System.out.println("Ese numero de telefono ya esta ocupado");
+            JOptionPane.showMessageDialog(null, "Ese numero de telefono ya esta ocupado");
         }
     }
 
     public Cliente buscarCliente(long telefono) {
 
-        for (Map.Entry<Long, Cliente> cliente : registro.entrySet()) {
+        // for (Map.Entry<Long, Cliente> cliente : registro.entrySet()) {
+        return registro.get(telefono);
+        //  }
 
-            return registro.get(telefono);
-        }
-
-        return null;
+        //  return null;
     }
 
     public ArrayList<Long> buscarTelefono(String apellido) {
@@ -48,6 +50,10 @@ public class DirectorioTelefonico {
 
             }
         }
+        if(telefonos.size() == 0){
+             JOptionPane.showMessageDialog(null, "No existen clientes con este apellido");
+    
+        }
         return telefonos;
     }
 
@@ -55,37 +61,53 @@ public class DirectorioTelefonico {
 
         TreeSet<Cliente> cityCliente = new TreeSet();
 
-        for (Map.Entry<Long, Cliente> cliente : registro.entrySet()) {
+        for (Cliente unCliente : registro.values()) {
+
+            if (ciudad.equalsIgnoreCase(unCliente.getCiudad())) {
+
+                cityCliente.add(unCliente);
+
+            }
+
+        }
+
+        return cityCliente;
+
+        /*    for (Map.Entry<Long, Cliente> cliente : registro.entrySet()) {
 
             if (ciudad.equalsIgnoreCase(cliente.getValue().getCiudad())) {
 
+               // System.out.println(cliente.getKey());
+                //  System.out.println(cliente.getValue().getClass());
                 
-                cityCliente.add(cliente.getValue());
+                
+               cityCliente.add(cliente.getValue());
+               
+             
 
             }
-        }
-        return cityCliente;
-
+        }*/
     }
-    
-    public void borrarCliente(long telefono){
-        
-        
-          if (registro.containsKey(telefono)) {
 
-            System.out.println("El cliente se quito con exito");
-            registro.remove(telefono);// revisar esto!!
+    public void borrarCliente(long telefono) {
+
+        if (registro.containsKey(telefono)) {
+
+            JOptionPane.showMessageDialog(null, "El cliente se quito con exito");
+            //   System.out.println("El cliente se quito con exito");
+            registro.remove(telefono);// revisar esto!! PD esta bien asdasd
 
         } else {
-
-            System.out.println("Ese numero de telefono no exite en el registro");
+            JOptionPane.showMessageDialog(null, "Ese numero de telefono no exite en el registro");
+            //  System.out.println("Ese numero de telefono no exite en el registro");
 
         }
-        
-        
+
     }
-    
-    
-    
+
+    @Override
+    public String toString() { // ver despues
+        return "DirectorioTelefonico{" + "registro=" + registro + '}';
+    }
 
 }

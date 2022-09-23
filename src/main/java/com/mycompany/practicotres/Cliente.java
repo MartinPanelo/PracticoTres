@@ -1,6 +1,6 @@
 package com.mycompany.practicotres;
 
-public class Cliente {
+public class Cliente implements Comparable<Cliente> {
 
     private long dni;
     private String nombre;
@@ -58,12 +58,48 @@ public class Cliente {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
+
     // OVERIDE DE EQUAL Y HASHCODE
-    
-   
- 
-	
-	
+    @Override
+    public String toString() {
+        return "Cliente{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", ciudad=" + ciudad + ", direccion=" + direccion + '}';
+    }
+
+    // override de equal y hashcode y por que no compareTo????????????????? 
+    @Override // esto es para los treeset
+    public int compareTo(Cliente cliente) {
+
+        if (cliente.dni == this.dni) {
+            return 0;
+        } else if (cliente.dni > this.dni) {
+            return 1;
+        }
+        return -1;
+
+    }
+    /*  estos son para los hashset
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 13 * hash + (int) (this.dni ^ (this.dni >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cliente other = (Cliente) obj;
+        return this.dni == other.dni;
+    }
+
+     */
 
 }
