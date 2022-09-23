@@ -50,7 +50,7 @@ public class DirectorioTelefonico {
 
             }
         }
-        if(telefonos.size() == 0){
+        if(telefonos.isEmpty()){
              JOptionPane.showMessageDialog(null, "No existen clientes con este apellido");
     
         }
