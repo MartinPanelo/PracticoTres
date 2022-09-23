@@ -4,5 +4,6 @@ integrantes: Ezequiel Sosa, Carlos Lucero, Ailen Bustillos, Panelo Martin.
 
 UML:
 
+![IMAGEN UMLTP3](https://user-images.githubusercontent.com/95503065/192047262-0ec82258-4033-4ba3-8740-a48791b4932b.png)
 
-![UML TP 3](https://user-images.githubusercontent.com/95503065/191869562-aad3da37-10f7-4edd-8c57-3d6a60c329d0.jpeg)
+
