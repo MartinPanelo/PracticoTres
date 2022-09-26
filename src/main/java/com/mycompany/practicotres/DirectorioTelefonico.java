@@ -30,14 +30,12 @@ public class DirectorioTelefonico {
     }
 
     public Cliente buscarCliente(long telefono) {
-
-        // for (Map.Entry<Long, Cliente> cliente : registro.entrySet()) {
         return registro.get(telefono);
-        //  }
-
-        //  return null;
     }
+    // for (Map.Entry<Long, Cliente> cliente : registro.entrySet()) {
 
+    //  }
+    //  return null;
     public ArrayList<Long> buscarTelefono(String apellido) {
 
         ArrayList<Long> telefonos = new ArrayList();
@@ -50,9 +48,9 @@ public class DirectorioTelefonico {
 
             }
         }
-        if(telefonos.isEmpty()){
-             JOptionPane.showMessageDialog(null, "No existen clientes con este apellido");
-    
+        if (telefonos.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No existen clientes con este apellido");
+
         }
         return telefonos;
     }
@@ -72,6 +70,7 @@ public class DirectorioTelefonico {
         }
 
         return cityCliente;
+    }
 
         /*    for (Map.Entry<Long, Cliente> cliente : registro.entrySet()) {
 
@@ -87,7 +86,7 @@ public class DirectorioTelefonico {
 
             }
         }*/
-    }
+    
 
     public void borrarCliente(long telefono) {
 

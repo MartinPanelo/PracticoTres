@@ -66,15 +66,16 @@ public class Cliente implements Comparable<Cliente> {
     }
 
     // override de equal y hashcode y por que no compareTo????????????????? 
-    @Override // esto es para los treeset
-    public int compareTo(Cliente cliente) {
+   // esto es para los treeset
+    @Override 
+    public int compareTo(Cliente cliente) {//mejor que dni, ordenar por ciudad??
 
         if (cliente.dni == this.dni) {
             return 0;
         } else if (cliente.dni > this.dni) {
-            return 1;
+            return -1;
         }
-        return -1;
+        return 1;
 
     }
     /*  estos son para los hashset
