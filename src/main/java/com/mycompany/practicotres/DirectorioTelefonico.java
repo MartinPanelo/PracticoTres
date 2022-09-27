@@ -48,10 +48,7 @@ public class DirectorioTelefonico {
 
             }
         }
-        if (telefonos.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "No existen clientes con este apellido");
-
-        }
+      
         return telefonos;
     }
 
