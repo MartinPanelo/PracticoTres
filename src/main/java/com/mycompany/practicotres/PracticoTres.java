@@ -1,7 +1,5 @@
 package com.mycompany.practicotres;
 
-import javax.swing.JOptionPane;
-
 public class PracticoTres {
 
     public static void main(String[] args) {
@@ -49,6 +47,7 @@ public class PracticoTres {
         paginasNaranjas.borrarCliente(2222);
 
         paginasNaranjas.borrarCliente(2222);
+        
 
     }
 
